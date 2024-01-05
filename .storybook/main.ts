@@ -12,7 +12,7 @@ const config: StorybookConfig = {
     "@storybook/addon-mdx-gfm"
   ],
   framework: {
-    name: "@storybook/vue3-vite",
+    name: "@storybook-vue/nuxt",
     options: {},
   },
   docs: {
