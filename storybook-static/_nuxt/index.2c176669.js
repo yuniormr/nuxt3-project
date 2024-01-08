@@ -1,0 +1,2 @@
+import{_ as a}from"./nuxt-link.d46656d6.js";import{o as n,a as s,j as o,p as r,s as t,F as c}from"./vue.esm-bundler.3c6330b2.js";import{_}from"./_plugin-vue_export-helper.c27b6911.js";import"./ready.16c410c8.js";import"./paths.0a99bdd6.js";import"./index.e7fd869b.js";const m={};function i(p,u){const e=a;return n(),s(c,null,[o(e,{to:"/request",class:"text"},{default:r(()=>[t("Solicitud")]),_:1}),t(" | "),o(e,{to:"/query"},{default:r(()=>[t("Consulta")]),_:1})],64)}const h=_(m,[["render",i]]);export{h as default};
+//# sourceMappingURL=index.2c176669.js.map

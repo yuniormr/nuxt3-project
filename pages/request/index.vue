@@ -13,19 +13,30 @@ import Radio from "~/components/DesignSystem/Elements/form/radio/Radio.vue";</sc
     <NuxtLink to="#" class="underline text-blue-700">Instituto de Prevision Social</NuxtLink>
   </p>
   <h1 class="text-3xl font-bold">Formulario de contacto</h1>
-  <div class="h-12 w-full bg-gray-300 text-center my-3 flex justify-center items-center">
+  <div class="h-12 w-full bg-gray-300 text-center my-3 flex justify-center items-center my-8">
     Steep 1
   </div>
-  <DsTitle type="h3" text="Estamos aqui para ayudarte"/>
+  <DsTitle type="h3" text="Estamos aqui para ayudarte" marginBottom="5"/>
   <DsAlert
+      contentText="prueba"
       class="border border-blue-700"
       :has-font-awesome="true"
       title-text=""
+
   />
-  <DsContent text="¿Cual es tu nacionalidad?*"></DsContent>
-  <Radio radio-text="Chileno"/>
+  <DsContent text="¿Cual es tu nacionalidad?*" marginTop="8" marginBottom="3"></DsContent>
+  <Radio radio-text="Chileno" marginBottom="3"/>
   <br>
-  <Radio radio-text="Extranjero"/>
+  <Radio radio-text="Extranjero" marginBottom="10"/>
+
+  <DsAlert
+      class="border border-yellow-400"
+      :has-font-awesome="true"
+      title-text="Importante:"
+      titleColor="#111"
+  />
+
+  
 
 
 </template>

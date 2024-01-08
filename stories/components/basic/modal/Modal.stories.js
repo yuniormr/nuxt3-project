@@ -1,6 +1,5 @@
 import DsModal from "~/components/DesignSystem/components/basic/modal/DsModal.vue";
 import Confirmation from "~/components/DesignSystem/pages/Confirmation/Confirmation.vue";
-
 //probando git
 export default {
   components: { Confirmation },

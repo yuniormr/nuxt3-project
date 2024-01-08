@@ -1,0 +1,1 @@
+{"version":3,"file":"DsLink.vue.ccb1d83e.js","sources":["../../components/DesignSystem/Elements/basic/link/library.ts"],"sourcesContent":["export const colorLinkClasses = {\n  dark: \"text-dark-500\",\n  primary: \"text-primary-500\",\n  white: \"text-white\",\n};\n"],"names":["colorLinkClasses"],"mappings":"sXAAO,MAAMA,EAAmB,CAC9B,KAAM,gBACN,QAAS,mBACT,MAAO,YACT"}

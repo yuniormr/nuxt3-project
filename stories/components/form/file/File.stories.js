@@ -10,8 +10,15 @@ export default {
       control: {
         type: "select",
       },
-      options: ["primary", "secondary"],
+      options: ["primary", "white", "danger"],
       description: "primary, secondary",
+    },
+    onSelectedDsFile: {
+      control: {
+        type: "none",
+      },
+      description:
+        "This is the event that is executed in the onChange of the component",
     },
     disabled: {
       description: "Disable component. - boolean",

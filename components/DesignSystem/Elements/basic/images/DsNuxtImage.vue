@@ -11,10 +11,18 @@ import {
   paddingRightClasses,
   paddingTopClasses,
   sizeImagesClasses,
-} from '~/components/common/propsStyle';
-import type { IStyleString } from '~/interfaces/elements';
+} from "~/components/DesignSystem/common/propsStyle";
+import type { IStyleString } from "~/interfaces/elements";
 
-type ISize = 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge' | 'xxLarge' | 'auto';
+type ISize =
+  | "xSmall"
+  | "small"
+  | "medium"
+  | "large"
+  | "xLarge"
+  | "xxLarge"
+  | "auto";
+
 const props = defineProps({
   radius: {
     type: Boolean,
@@ -24,7 +32,7 @@ const props = defineProps({
   },
   alt: {
     type: String,
-    default: 'Text for description',
+    default: "Text for description",
   },
   margin: String as () => IStyleString,
   marginTop: String as () => IStyleString,
@@ -49,12 +57,14 @@ const props = defineProps({
   },
   src: {
     type: String,
-    default: '/images/sample-image.jpg',
+    default: "/images/sample-image.jpg",
   },
 });
 const imageSrc = computed(() => {
   return props.src;
 });
+
+
 </script>
 
 <template>

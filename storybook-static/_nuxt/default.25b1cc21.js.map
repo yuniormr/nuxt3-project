@@ -1,0 +1,1 @@
+{"version":3,"file":"default.25b1cc21.js","sources":["../../layouts/default.vue"],"sourcesContent":["<template>\n  <div class=\"container mx-auto font-robotoSlab\">\n    <slot></slot>\n  </div>\n</template>"],"names":["_sfc_render","_ctx","_cache","_openBlock","_createElementBlock","_hoisted_1"],"mappings":"qLACE,SAAAA,EAAAC,EAAAC,EAAA,QACeC,EAAA,EAAAC,EAAA,MAAAC,EAAA"}

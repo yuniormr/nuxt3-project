@@ -1,5 +1,5 @@
 import { commonArgTypes } from "~/stories/common/common";
-import DsDropdown from "~/components/DesignSystem/Elements/basic/DsDropdown/DsDropdown.vue";
+import DsDropdown from "~/components/DesignSystem/Elements/basic/dropdown/DsDropdown.vue";
 
 const { backgroundColor, ...otherProps } = commonArgTypes;
 

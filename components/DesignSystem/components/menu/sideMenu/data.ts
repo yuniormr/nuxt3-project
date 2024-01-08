@@ -1,4 +1,4 @@
-import type { ISideMenuData } from "~/components/components/menu/sideMenu/interfaces";
+import type { ISideMenuData } from "~/components/DesignSystem/components/menu/sideMenu/interfaces";
 
 export const menuItems: ISideMenuData[] = [
   {

@@ -1,5 +1,5 @@
 import { commonArgTypes } from "../../../common/common";
-import Input from "~/components/DesignSystem/Elements/form/input/Input.vue";
+import Input from "~/components/DesignSystem/Elements/form/input/DsInput.vue";
 
 const {
   backgroundColor,

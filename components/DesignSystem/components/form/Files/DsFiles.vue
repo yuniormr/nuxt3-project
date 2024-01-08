@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const selectedFileName = ref("");
-type IButtonColor = "primary" | "secondary";
+import type { Ref } from "vue";
+import DsButton from "~/components/DesignSystem/components/basic/button/DsButton.vue";
 
-const buttonColorClasses = {
-  primary: "bg-primary-500",
-  secondary: "bg-gray-500",
-};
+type IButtonColor = "white" | "primary" | "danger";
+
+interface FileInputRef extends Ref<HTMLInputElement | null> {}
+
 defineProps({
   isHideLabel: {
     type: Boolean,
@@ -17,7 +17,7 @@ defineProps({
   },
   isHidePlaceHolderText: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   buttonColor: {
     type: String as () => IButtonColor,
@@ -29,53 +29,56 @@ defineProps({
   },
   placeHolderText: {
     type: String,
-    default: "text",
+    default: "No hay archivo seleccionado",
   },
   buttonText: {
     type: String,
-    default: "Buscar",
+    default: "Examinar",
   },
 });
+const emit = defineEmits(["onSelectedDsFile"]);
+const selectedFileName = ref(null);
+const refFileName: FileInputRef = ref(null);
 
-const handleFileInputChange = (event: any) => {
-  const fileInput = event.target;
-  if (fileInput.files.length > 0) {
-    selectedFileName.value = fileInput.files[0].name;
-  } else {
-    selectedFileName.value = "";
-  }
+const openFilePicker = () => {
+  // document.getElementById("file").click();
+  refFileName.value?.click();
+};
+
+const handleFileChange = (event: { target: { files: any[] } }) => {
+  const file = event.target.files[0];
+  selectedFileName.value = file.name;
+  emit("onSelectedDsFile", file);
 };
 </script>
 <template>
   <div id="app">
-    <label v-if="!isHideLabel" class="block mb-1" for="file">{{
-      labelText
-    }}</label>
+    <label v-if="!isHideLabel" class="block mb-1">{{ labelText }}</label>
     <div class="flex">
       <input
         id="file"
+        ref="refFileName"
         :disabled="disabled"
         class="hidden"
+        name="file"
         type="file"
-        @change="handleFileInputChange"
+        @change="handleFileChange"
       />
-
+      <!--      no puse el genérico porque no se le agregó propiedades lógicas como value-->
       <input
-        v-model="selectedFileName"
-        :placeholder="isHidePlaceHolderText ? '' : placeHolderText"
-        class="hover:border-dark-500 border p-2 rounded font-roboto"
+        :placeholder="!isHidePlaceHolderText ? '' : placeHolderText"
+        :value="selectedFileName"
+        class="hover:border-dark-500 border p-2 rounded rounded-e-none font-roboto w-full"
+        disabled
         readonly
-        type="text"
       />
-      <label
-        :class="[
-          'rounded-e font-roboto border border-primary-500 text-white  px-3 py-2 hover:bg-primary-900 hover:text-white cursor-pointer',
-          buttonColorClasses[buttonColor],
-        ]"
-        for="file"
-      >
-        <i class="las la-search"></i> {{ buttonText }}
-      </label>
+      <DsButton
+        :background-color="buttonColor"
+        :text="buttonText"
+        awesome-left="las la-search"
+        text-color="white"
+        @click="openFilePicker"
+      />
     </div>
   </div>
 </template>

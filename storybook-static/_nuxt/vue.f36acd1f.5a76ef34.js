@@ -1,0 +1,2 @@
+import{r as u,w as o,b as f,e as d,f as v,g as i,h as l}from"./vue.esm-bundler.3c6330b2.js";import{i as h,r as m}from"./vue.cf295fb1.d2480b66.js";function U(t,a={}){const e=a.head||h();if(e)return e.ssr?e.push(t,a):p(e,t,a)}function p(t,a,e={}){const s=u(!1),n=u({});o(()=>{n.value=s.value?{}:m(a)});const r=t.push(n.value,e);return f(n,c=>{r.patch(c)}),l()&&(d(()=>{r.dispose()}),v(()=>{s.value=!0}),i(()=>{s.value=!1})),r}export{U as u};
+//# sourceMappingURL=vue.f36acd1f.5a76ef34.js.map

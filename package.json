@@ -21,6 +21,7 @@
     "@storybook/addon-links": "7.6.7",
     "@storybook/addon-mdx-gfm": "7.6.7",
     "@storybook/blocks": "7.6.7",
+    "@storybook/test": "^7.6.7",
     "@storybook/testing-library": "^0.2.2",
     "@storybook/vue3": "7.6.7",
     "@storybook/vue3-vite": "7.6.7",
@@ -31,5 +32,8 @@
     "storybook": "7.6.7",
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.1.0"
   }
 }
