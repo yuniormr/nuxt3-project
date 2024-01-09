@@ -17,6 +17,6 @@ RUN yarn install
 # Run
 FROM base
 
-COPY --from=build /src/node_modules /src/node_modules
+COPY --from=build ./node_modules ./node_modules
 
 CMD [ "yarn", "dev" ]
